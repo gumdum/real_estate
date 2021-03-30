@@ -1,6 +1,14 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
+import 'package:real_estate/data/data_sources/listing_remote_data_source.dart';
 
 void main() {
+  Client apiClient = Client();
+  ListingRemoteDataSource dataSource = ListingRemoteDataSourceImpl(apiClient);
+  dataSource.getFeatured();
+
   runApp(MyApp());
 }
 

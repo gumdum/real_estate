@@ -36,6 +36,7 @@ linux/
 macos/
 web/
 windows/
+lib/app_data.dart
 
 # Web related
 lib/generated_plugin_registrant.dart
