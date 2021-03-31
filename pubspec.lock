@@ -50,6 +50,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
+  dfunc:
+    dependency: "direct main"
+    description:
+      name: dfunc
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.2"
   equatable:
     dependency: "direct main"
     description:

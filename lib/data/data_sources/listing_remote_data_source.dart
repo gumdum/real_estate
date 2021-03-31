@@ -17,23 +17,24 @@ class ListingRemoteDataSourceImpl extends ListingRemoteDataSource {
   Future<List<ListingModel>> getFeatured() async {
     final response = await _client.get('&\$top=20');
 
-    final listings = ListingsResultModel.fromJson(response).listings;
-    return listings;
+    final featuredListings = ListingsResultModel.fromJson(response).listings;
+    return featuredListings;
   }
 
   @override
   Future<List<ListingModel>> getForSale() async {
     final response = await _client.get('&\$skip=30&\$top=10');
 
-    final listings = ListingsResultModel.fromJson(response).listings;
-    return listings;
+    final forSaleListings = ListingsResultModel.fromJson(response).listings;
+    return forSaleListings;
   }
 
   @override
   Future<List<ListingModel>> getRental() async {
     final response = await _client.get('&\$skip=20&\$top=10');
 
-    final listings = ListingsResultModel.fromJson(response).listings;
-    return listings;
+    final rentalListings = ListingsResultModel.fromJson(response).listings;
+
+    return rentalListings;
   }
 }
