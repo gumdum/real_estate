@@ -1,43 +1,39 @@
-import 'dart:convert';
-import 'dart:io';
-
-import 'package:http/http.dart';
-import 'package:real_estate/data/core/api_constants.dart';
+import 'package:real_estate/data/core/api_client.dart';
 import 'package:real_estate/data/models/listing_model.dart';
 import 'package:real_estate/data/models/listings_result_model.dart';
 
 abstract class ListingRemoteDataSource {
   Future<List<ListingModel>> getFeatured();
+  Future<List<ListingModel>> getForSale();
+  Future<List<ListingModel>> getRental();
 }
 
 class ListingRemoteDataSourceImpl extends ListingRemoteDataSource {
-  final Client _client;
-  HttpClient client = new HttpClient();
+  final ApiClient _client;
 
   ListingRemoteDataSourceImpl(this._client);
 
   @override
   Future<List<ListingModel>> getFeatured() async {
-    Map<String, String> headers = Map();
-    headers['Content-Type'] = 'application/text';
+    final response = await _client.get('&\$top=20');
 
-    final urlString =
-        '${ApiConstants.BASE_URL}/Property?access_token=${ApiConstants.ACCESS_TOKEN}&\$top=20';
-    print(urlString);
-    final response = await _client.get(
-      Uri.parse(urlString),
-      headers: headers,
-    );
+    final listings = ListingsResultModel.fromJson(response).listings;
+    return listings;
+  }
 
-    if (response.statusCode == 200) {
-      final responseBody = json.decode(response.body);
-      final listings = ListingsResultModel.fromJson(responseBody).listings;
-      print(listings);
-      return listings;
-    } else if (response.statusCode == 404) {
-      throw Exception('Page not found: $urlString');
-    } else {
-      throw Exception(response.reasonPhrase);
-    }
+  @override
+  Future<List<ListingModel>> getForSale() async {
+    final response = await _client.get('&\$skip=30&\$top=10');
+
+    final listings = ListingsResultModel.fromJson(response).listings;
+    return listings;
+  }
+
+  @override
+  Future<List<ListingModel>> getRental() async {
+    final response = await _client.get('&\$skip=20&\$top=10');
+
+    final listings = ListingsResultModel.fromJson(response).listings;
+    return listings;
   }
 }

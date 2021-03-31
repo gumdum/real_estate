@@ -1,14 +1,15 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 
-class ListingEntity {
-  final String listingId; //id of each property listing
+class ListingEntity extends Equatable {
+  final String listingKey; //id of each property listing
   final int listPrice; //400000
 
   ListingEntity({
-    @required this.listingId,
+    @required this.listingKey,
     @required this.listPrice,
-  }) : assert(listingId.isEmpty, 'Listing id must not be null');
+  });
 
   @override
-  List<Object> get props => [listingId, listPrice];
+  List<Object> get props => [listingKey, listPrice];
 }

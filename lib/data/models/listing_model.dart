@@ -192,7 +192,7 @@ class ListingModel extends ListingEntity {
     final this.buildingAreaTotal,
     final this.otherEquipment,
   }) : super(
-          listingId: listingKey,
+          listingKey: listingKey,
           listPrice: listPrice,
         );
 
@@ -930,6 +930,11 @@ class ListingModel extends ListingEntity {
         "BuildingAreaTotal": buildingAreaTotal,
         "OtherEquipment": List<dynamic>.from(otherEquipment.map((x) => x)),
       };
+
+  @override
+  String toString() {
+    return this.listingKey;
+  }
 }
 
 enum AccessibilityFeature {
