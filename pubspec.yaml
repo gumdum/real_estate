@@ -26,7 +26,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   dfunc: ^0.6.2
   equatable: ^2.0.0
+  get_it: ^6.0.0
   http: ^0.13.1
+  pedantic: ^1.11.0
 
 dev_dependencies:
   flutter_test:
