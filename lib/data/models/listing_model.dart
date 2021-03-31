@@ -1,390 +1,392 @@
+import 'dart:core';
+
 import 'package:real_estate/domain/entities/listing_entity.dart';
 
 class ListingModel extends ListingEntity {
   ListingModel({
-    final this.odataContext,
-    final this.odataId,
-    final this.streetDirPrefix,
-    final this.bedroomsTotal,
-    final this.livingAreaUnits,
-    final this.greenSustainability,
-    final this.listAgentKey,
-    final this.taxLegalDescription,
-    final this.contingentDate,
-    final this.flooring,
-    final this.photosCount,
-    final this.fireplacesTotal,
-    final this.additionalParcelsYn,
-    final this.waterfrontFeatures,
-    final this.viewYn,
-    final this.cooling,
-    final this.garageYn,
-    final this.exteriorFeatures,
-    final this.statusChangeTimestamp,
-    final this.availabilityDate,
-    final this.securityFeatures,
-    final this.buyerAgentFullName,
-    final this.documentsCount,
-    final this.publicRemarks,
-    final this.associationName,
-    final this.buildingName,
-    final this.coBuyerAgentKey,
-    final this.associationFeeFrequency,
-    final this.elementarySchoolDistrict,
-    final this.waterBodyName,
-    final this.coListOfficeName,
-    final this.roadSurfaceType,
-    final this.aboveGradeFinishedArea,
-    final this.priceChangeTimestamp,
-    final this.listingKeyNumeric,
-    final this.majorChangeType,
-    final this.leasableArea,
-    final this.listingContractDate,
-    final this.coListOfficeKey,
-    final this.zoning,
-    final this.appliances,
-    final this.mlsAreaMajor,
-    final this.listOfficeName,
-    final this.coBuyerOfficeName,
-    final this.belowGradeFinishedArea,
-    final this.taxBlock,
-    final this.currentUse,
-    final this.originatingSystemKey,
-    final this.countyOrParish,
-    final this.dualVariableCompensationYn,
-    final this.propertyType,
-    final this.photosChangeTimestamp,
-    final this.listPrice,
-    final this.originatingSystemName,
-    final this.associationYn,
-    final this.mlsStatus,
-    final this.streetNumber,
-    final this.grossScheduledIncome,
-    final this.belowGradeFinishedAreaSource,
-    final this.coBuyerOfficeKey,
-    final this.leaseTerm,
-    final this.listingKey,
-    final this.stateOrProvince,
-    final this.aboveGradeFinishedAreaUnits,
-    final this.coveredSpaces,
-    final this.listAgentKeyNumeric,
-    final this.middleOrJuniorSchool,
-    final this.associationFeeIncludes,
-    final this.syndicateTo,
-    final this.virtualTourUrlUnbranded,
-    final this.elementarySchool,
-    final this.streetDirSuffix,
-    final this.listOfficeKeyNumeric,
-    final this.disclosures,
-    final this.listOfficeKey,
-    final this.directions,
-    final this.bridgeModificationTimestamp,
-    final this.listAgentFullName,
-    final this.attachedGarageYn,
-    final this.standardStatus,
-    final this.cultivatedArea,
-    final this.roof,
-    final this.propertyCondition,
-    final this.parkingTotal,
-    final this.coListOfficeKeyNumeric,
-    final this.parcelNumber,
-    final this.poolPrivateYn,
-    final this.additionalParcelsDescription,
-    final this.listingTerms,
-    final this.foundationDetails,
-    final this.view,
-    final this.operatingExpense,
-    final this.propertySubType,
-    final this.highSchool,
-    final this.levels,
-    final this.operatingExpenseIncludes,
-    final this.idxParticipationYn,
-    final this.interiorFeatures,
-    final this.bathroomsFull,
-    final this.waterfrontYn,
-    final this.lockBoxType,
-    final this.lotSizeAcres,
-    final this.subdivisionName,
-    final this.offMarketDate,
-    final this.fencing,
-    final this.internetAddressDisplayYn,
-    final this.contingency,
-    final this.closeDate,
-    final this.streetSuffix,
-    final this.horseAmenities,
-    final this.listingService,
-    final this.waterSource,
-    final this.topography,
-    final this.lotSizeDimensions,
-    final this.storiesTotal,
-    final this.modificationTimestamp,
-    final this.yearBuilt,
-    final this.propertyAttachedYn,
-    final this.buyerAgentKey,
-    final this.taxLot,
-    final this.originatingSystemId,
-    final this.horseYn,
-    final this.petsAllowed,
-    final this.unitNumber,
-    final this.netOperatingIncome,
-    final this.occupantType,
-    final this.otherStructures,
-    final this.virtualTourUrlZillow,
-    final this.coListAgentFullName,
-    final this.coListAgentKey,
-    final this.belowGradeFinishedAreaUnits,
-    final this.entryLocation,
-    final this.spaFeatures,
-    final this.livingArea,
-    final this.taxAssessedValue,
-    final this.coListAgentKeyNumeric,
-    final this.existingLeaseType,
-    final this.parkingFeatures,
-    final this.postalCodePlus4,
-    final this.bathroomsHalf,
-    final this.poolFeatures,
-    final this.lotSizeArea,
-    final this.sewer,
-    final this.heating,
-    final this.totalActualRent,
-    final this.streetName,
-    final this.ownerPays,
-    final this.anchorsCoTenants,
-    final this.patioAndPorchFeatures,
-    final this.mainLevelBedrooms,
-    final this.listingAgreement,
-    final this.utilities,
-    final this.fireplaceFeatures,
-    final this.listingId,
-    final this.documentsChangeTimestamp,
-    final this.windowFeatures,
-    final this.specialListingConditions,
-    final this.newConstructionYn,
-    final this.communityFeatures,
-    final this.bathroomsTotalInteger,
-    final this.numberOfBuildings,
-    final this.garageSpaces,
-    final this.greenEnergyEfficient,
-    final this.media,
-    final this.city,
-    final this.internetEntireListingDisplayYn,
-    final this.internetAutomatedValuationDisplayYn,
-    final this.accessibilityFeatures,
-    final this.highSchoolDistrict,
-    final this.buildingFeatures,
-    final this.ownershipType,
-    final this.directionFaces,
-    final this.lotFeatures,
-    final this.postalCode,
-    final this.furnished,
-    final this.documentsAvailable,
-    final this.constructionMaterials,
-    final this.numberOfUnitsTotal,
-    final this.buyerOfficeName,
-    final this.associationFee,
-    final this.lotSizeSquareFeet,
-    final this.coBuyerAgentFullName,
-    final this.tenantPays,
-    final this.middleOrJuniorSchoolDistrict,
-    final this.buyerOfficeKey,
-    final this.unparsedAddress,
-    final this.internetConsumerCommentYn,
-    final this.buildingAreaTotal,
-    final this.otherEquipment,
+    required this.odataContext,
+    required this.odataId,
+    required this.streetDirPrefix,
+    required this.bedroomsTotal,
+    required this.livingAreaUnits,
+    required this.greenSustainability,
+    required this.listAgentKey,
+    required this.taxLegalDescription,
+    required this.contingentDate,
+    required this.flooring,
+    required this.photosCount,
+    required this.fireplacesTotal,
+    required this.additionalParcelsYn,
+    required this.waterfrontFeatures,
+    required this.viewYn,
+    required this.cooling,
+    required this.garageYn,
+    required this.exteriorFeatures,
+    required this.statusChangeTimestamp,
+    required this.availabilityDate,
+    required this.securityFeatures,
+    required this.buyerAgentFullName,
+    required this.documentsCount,
+    required this.publicRemarks,
+    required this.associationName,
+    required this.buildingName,
+    required this.coBuyerAgentKey,
+    required this.associationFeeFrequency,
+    required this.elementarySchoolDistrict,
+    required this.waterBodyName,
+    required this.coListOfficeName,
+    required this.roadSurfaceType,
+    required this.aboveGradeFinishedArea,
+    required this.priceChangeTimestamp,
+    required this.listingKeyNumeric,
+    required this.majorChangeType,
+    required this.leasableArea,
+    required this.listingContractDate,
+    required this.coListOfficeKey,
+    required this.zoning,
+    required this.appliances,
+    required this.mlsAreaMajor,
+    required this.listOfficeName,
+    required this.coBuyerOfficeName,
+    required this.belowGradeFinishedArea,
+    required this.taxBlock,
+    required this.currentUse,
+    required this.originatingSystemKey,
+    required this.countyOrParish,
+    required this.dualVariableCompensationYn,
+    required this.propertyType,
+    required this.photosChangeTimestamp,
+    required this.listPrice,
+    required this.originatingSystemName,
+    required this.associationYn,
+    required this.mlsStatus,
+    required this.streetNumber,
+    required this.grossScheduledIncome,
+    required this.belowGradeFinishedAreaSource,
+    required this.coBuyerOfficeKey,
+    required this.leaseTerm,
+    required this.listingKey,
+    required this.stateOrProvince,
+    required this.aboveGradeFinishedAreaUnits,
+    required this.coveredSpaces,
+    required this.listAgentKeyNumeric,
+    required this.middleOrJuniorSchool,
+    required this.associationFeeIncludes,
+    required this.syndicateTo,
+    required this.virtualTourUrlUnbranded,
+    required this.elementarySchool,
+    required this.streetDirSuffix,
+    required this.listOfficeKeyNumeric,
+    required this.disclosures,
+    required this.listOfficeKey,
+    required this.directions,
+    required this.bridgeModificationTimestamp,
+    required this.listAgentFullName,
+    required this.attachedGarageYn,
+    required this.standardStatus,
+    required this.cultivatedArea,
+    required this.roof,
+    required this.propertyCondition,
+    required this.parkingTotal,
+    required this.coListOfficeKeyNumeric,
+    required this.parcelNumber,
+    required this.poolPrivateYn,
+    required this.additionalParcelsDescription,
+    required this.listingTerms,
+    required this.foundationDetails,
+    required this.view,
+    required this.operatingExpense,
+    required this.propertySubType,
+    required this.highSchool,
+    required this.levels,
+    required this.operatingExpenseIncludes,
+    required this.idxParticipationYn,
+    required this.interiorFeatures,
+    required this.bathroomsFull,
+    required this.waterfrontYn,
+    required this.lockBoxType,
+    required this.lotSizeAcres,
+    required this.subdivisionName,
+    required this.offMarketDate,
+    required this.fencing,
+    required this.internetAddressDisplayYn,
+    required this.contingency,
+    required this.closeDate,
+    required this.streetSuffix,
+    required this.horseAmenities,
+    required this.listingService,
+    required this.waterSource,
+    required this.topography,
+    required this.lotSizeDimensions,
+    required this.storiesTotal,
+    required this.modificationTimestamp,
+    required this.yearBuilt,
+    required this.propertyAttachedYn,
+    required this.buyerAgentKey,
+    required this.taxLot,
+    required this.originatingSystemId,
+    required this.horseYn,
+    required this.petsAllowed,
+    required this.unitNumber,
+    required this.netOperatingIncome,
+    required this.occupantType,
+    required this.otherStructures,
+    required this.virtualTourUrlZillow,
+    required this.coListAgentFullName,
+    required this.coListAgentKey,
+    required this.belowGradeFinishedAreaUnits,
+    required this.entryLocation,
+    required this.spaFeatures,
+    required this.livingArea,
+    required this.taxAssessedValue,
+    required this.coListAgentKeyNumeric,
+    required this.existingLeaseType,
+    required this.parkingFeatures,
+    required this.postalCodePlus4,
+    required this.bathroomsHalf,
+    required this.poolFeatures,
+    required this.lotSizeArea,
+    required this.sewer,
+    required this.heating,
+    required this.totalActualRent,
+    required this.streetName,
+    required this.ownerPays,
+    required this.anchorsCoTenants,
+    required this.patioAndPorchFeatures,
+    required this.mainLevelBedrooms,
+    required this.listingAgreement,
+    required this.utilities,
+    required this.fireplaceFeatures,
+    required this.listingId,
+    required this.documentsChangeTimestamp,
+    required this.windowFeatures,
+    required this.specialListingConditions,
+    required this.newConstructionYn,
+    required this.communityFeatures,
+    required this.bathroomsTotalInteger,
+    required this.numberOfBuildings,
+    required this.garageSpaces,
+    required this.greenEnergyEfficient,
+    required this.media,
+    required this.city,
+    required this.internetEntireListingDisplayYn,
+    required this.internetAutomatedValuationDisplayYn,
+    required this.accessibilityFeatures,
+    required this.highSchoolDistrict,
+    required this.buildingFeatures,
+    required this.ownershipType,
+    required this.directionFaces,
+    required this.lotFeatures,
+    required this.postalCode,
+    required this.furnished,
+    required this.documentsAvailable,
+    required this.constructionMaterials,
+    required this.numberOfUnitsTotal,
+    required this.buyerOfficeName,
+    required this.associationFee,
+    required this.lotSizeSquareFeet,
+    required this.coBuyerAgentFullName,
+    required this.tenantPays,
+    required this.middleOrJuniorSchoolDistrict,
+    required this.buyerOfficeKey,
+    required this.unparsedAddress,
+    required this.internetConsumerCommentYn,
+    required this.buildingAreaTotal,
+    required this.otherEquipment,
   }) : super(
           listingKey: listingKey,
           listPrice: listPrice,
         );
 
-  String odataContext;
-  String odataId;
-  StreetDirFix streetDirPrefix;
-  int bedroomsTotal;
-  dynamic livingAreaUnits;
-  List<dynamic> greenSustainability;
-  String listAgentKey;
-  String taxLegalDescription;
-  DateTime contingentDate;
-  List<Flooring> flooring;
-  int photosCount;
-  int fireplacesTotal;
-  dynamic additionalParcelsYn;
-  List<WaterfrontFeature> waterfrontFeatures;
-  bool viewYn;
-  List<Cooling> cooling;
-  bool garageYn;
-  List<String> exteriorFeatures;
-  DateTime statusChangeTimestamp;
-  dynamic availabilityDate;
-  List<SecurityFeature> securityFeatures;
-  String buyerAgentFullName;
-  dynamic documentsCount;
-  String publicRemarks;
-  String associationName;
-  dynamic buildingName;
-  String coBuyerAgentKey;
-  AssociationFeeFrequency associationFeeFrequency;
-  SchoolDistrict elementarySchoolDistrict;
-  String waterBodyName;
-  String coListOfficeName;
-  List<dynamic> roadSurfaceType;
-  dynamic aboveGradeFinishedArea;
-  DateTime priceChangeTimestamp;
-  int listingKeyNumeric;
-  MlsStatus majorChangeType;
-  dynamic leasableArea;
-  DateTime listingContractDate;
-  String coListOfficeKey;
-  dynamic zoning;
-  List<Appliance> appliances;
-  String mlsAreaMajor;
-  String listOfficeName;
-  String coBuyerOfficeName;
-  dynamic belowGradeFinishedArea;
-  dynamic taxBlock;
-  List<dynamic> currentUse;
-  OriginatingSystem originatingSystemKey;
-  CountyOrParish countyOrParish;
-  bool dualVariableCompensationYn;
-  PropertyType propertyType;
-  DateTime photosChangeTimestamp;
-  int listPrice;
-  OriginatingSystemName originatingSystemName;
-  bool associationYn;
-  MlsStatus mlsStatus;
-  String streetNumber;
-  dynamic grossScheduledIncome;
-  dynamic belowGradeFinishedAreaSource;
-  String coBuyerOfficeKey;
-  dynamic leaseTerm;
-  String listingKey;
-  StateOrProvince stateOrProvince;
-  dynamic aboveGradeFinishedAreaUnits;
-  int coveredSpaces;
-  int listAgentKeyNumeric;
-  String middleOrJuniorSchool;
-  List<AssociationFeeInclude> associationFeeIncludes;
-  List<SyndicateTo> syndicateTo;
-  String virtualTourUrlUnbranded;
-  String elementarySchool;
-  StreetDirFix streetDirSuffix;
-  int listOfficeKeyNumeric;
-  List<String> disclosures;
-  String listOfficeKey;
-  String directions;
-  DateTime bridgeModificationTimestamp;
-  String listAgentFullName;
-  bool attachedGarageYn;
-  MlsStatus standardStatus;
-  dynamic cultivatedArea;
-  List<Roof> roof;
-  List<PropertyCondition> propertyCondition;
-  int parkingTotal;
-  int coListOfficeKeyNumeric;
-  String parcelNumber;
-  bool poolPrivateYn;
-  dynamic additionalParcelsDescription;
-  List<ListingTerm> listingTerms;
-  List<FoundationDetail> foundationDetails;
-  List<View> view;
-  dynamic operatingExpense;
-  PropertySubType propertySubType;
-  String highSchool;
-  List<Level> levels;
-  List<dynamic> operatingExpenseIncludes;
-  bool idxParticipationYn;
-  List<String> interiorFeatures;
-  int bathroomsFull;
-  bool waterfrontYn;
-  List<LockBoxType> lockBoxType;
-  double lotSizeAcres;
-  String subdivisionName;
-  DateTime offMarketDate;
-  List<Fencing> fencing;
-  bool internetAddressDisplayYn;
-  dynamic contingency;
-  DateTime closeDate;
-  String streetSuffix;
-  List<dynamic> horseAmenities;
-  dynamic listingService;
-  List<WaterSource> waterSource;
-  dynamic topography;
-  String lotSizeDimensions;
-  dynamic storiesTotal;
-  DateTime modificationTimestamp;
-  int yearBuilt;
-  bool propertyAttachedYn;
-  String buyerAgentKey;
-  dynamic taxLot;
-  OriginatingSystem originatingSystemId;
-  bool horseYn;
-  List<String> petsAllowed;
-  String unitNumber;
-  dynamic netOperatingIncome;
-  OccupantType occupantType;
-  List<String> otherStructures;
-  dynamic virtualTourUrlZillow;
-  String coListAgentFullName;
-  String coListAgentKey;
-  dynamic belowGradeFinishedAreaUnits;
-  dynamic entryLocation;
-  List<Feature> spaFeatures;
-  int livingArea;
-  dynamic taxAssessedValue;
-  int coListAgentKeyNumeric;
-  List<dynamic> existingLeaseType;
-  List<ParkingFeature> parkingFeatures;
-  dynamic postalCodePlus4;
-  int bathroomsHalf;
-  List<Feature> poolFeatures;
-  double lotSizeArea;
-  List<Sewer> sewer;
-  List<Heating> heating;
-  dynamic totalActualRent;
-  String streetName;
-  List<dynamic> ownerPays;
-  dynamic anchorsCoTenants;
-  List<PatioAndPorchFeature> patioAndPorchFeatures;
-  int mainLevelBedrooms;
-  ListingAgreement listingAgreement;
-  List<Utility> utilities;
-  List<FireplaceFeature> fireplaceFeatures;
-  String listingId;
-  dynamic documentsChangeTimestamp;
-  List<WindowFeature> windowFeatures;
-  List<SpecialListingCondition> specialListingConditions;
-  bool newConstructionYn;
-  List<String> communityFeatures;
-  int bathroomsTotalInteger;
-  dynamic numberOfBuildings;
-  int garageSpaces;
-  List<String> greenEnergyEfficient;
-  List<Media> media;
-  City city;
-  bool internetEntireListingDisplayYn;
-  bool internetAutomatedValuationDisplayYn;
-  List<AccessibilityFeature> accessibilityFeatures;
-  SchoolDistrict highSchoolDistrict;
-  List<dynamic> buildingFeatures;
-  OwnershipType ownershipType;
-  String directionFaces;
-  List<String> lotFeatures;
-  String postalCode;
-  Furnished furnished;
-  List<String> documentsAvailable;
-  List<ConstructionMaterial> constructionMaterials;
-  dynamic numberOfUnitsTotal;
-  String buyerOfficeName;
-  int associationFee;
-  double lotSizeSquareFeet;
-  String coBuyerAgentFullName;
-  List<dynamic> tenantPays;
-  SchoolDistrict middleOrJuniorSchoolDistrict;
-  String buyerOfficeKey;
-  String unparsedAddress;
-  bool internetConsumerCommentYn;
-  int buildingAreaTotal;
-  List<dynamic> otherEquipment;
+  final String? odataContext;
+  final String? odataId;
+  final StreetDirFix? streetDirPrefix;
+  final int? bedroomsTotal;
+  final dynamic? livingAreaUnits;
+  final List<dynamic> greenSustainability;
+  final String? listAgentKey;
+  final String? taxLegalDescription;
+  final DateTime? contingentDate;
+  final List<Flooring> flooring;
+  final int? photosCount;
+  final int? fireplacesTotal;
+  final dynamic? additionalParcelsYn;
+  final List<WaterfrontFeature> waterfrontFeatures;
+  final bool? viewYn;
+  final List<Cooling> cooling;
+  final bool? garageYn;
+  final List<String> exteriorFeatures;
+  final DateTime statusChangeTimestamp;
+  final dynamic? availabilityDate;
+  final List<SecurityFeature> securityFeatures;
+  final String? buyerAgentFullName;
+  final dynamic? documentsCount;
+  final String? publicRemarks;
+  final String? associationName;
+  final dynamic? buildingName;
+  final String? coBuyerAgentKey;
+  final AssociationFeeFrequency? associationFeeFrequency;
+  final SchoolDistrict? elementarySchoolDistrict;
+  final String? waterBodyName;
+  final String? coListOfficeName;
+  final List<dynamic> roadSurfaceType;
+  final dynamic? aboveGradeFinishedArea;
+  final DateTime? priceChangeTimestamp;
+  final int? listingKeyNumeric;
+  final MlsStatus? majorChangeType;
+  final dynamic? leasableArea;
+  final DateTime listingContractDate;
+  final String? coListOfficeKey;
+  final dynamic? zoning;
+  final List<Appliance> appliances;
+  final String? mlsAreaMajor;
+  final String? listOfficeName;
+  final String? coBuyerOfficeName;
+  final dynamic? belowGradeFinishedArea;
+  final dynamic? taxBlock;
+  final List<dynamic> currentUse;
+  final OriginatingSystem? originatingSystemKey;
+  final CountyOrParish? countyOrParish;
+  final bool? dualVariableCompensationYn;
+  final PropertyType? propertyType;
+  final DateTime photosChangeTimestamp;
+  final int listPrice;
+  final OriginatingSystemName? originatingSystemName;
+  final bool? associationYn;
+  final MlsStatus? mlsStatus;
+  final String? streetNumber;
+  final dynamic? grossScheduledIncome;
+  final dynamic? belowGradeFinishedAreaSource;
+  final String? coBuyerOfficeKey;
+  final dynamic? leaseTerm;
+  final String listingKey;
+  final StateOrProvince? stateOrProvince;
+  final dynamic? aboveGradeFinishedAreaUnits;
+  final int? coveredSpaces;
+  final int? listAgentKeyNumeric;
+  final String? middleOrJuniorSchool;
+  final List<AssociationFeeInclude> associationFeeIncludes;
+  final List<SyndicateTo> syndicateTo;
+  final String? virtualTourUrlUnbranded;
+  final String? elementarySchool;
+  final StreetDirFix? streetDirSuffix;
+  final int? listOfficeKeyNumeric;
+  final List<String> disclosures;
+  final String? listOfficeKey;
+  final String? directions;
+  final DateTime bridgeModificationTimestamp;
+  final String? listAgentFullName;
+  final bool? attachedGarageYn;
+  final MlsStatus? standardStatus;
+  final dynamic? cultivatedArea;
+  final List<Roof> roof;
+  final List<PropertyCondition> propertyCondition;
+  final int? parkingTotal;
+  final int? coListOfficeKeyNumeric;
+  final String? parcelNumber;
+  final bool? poolPrivateYn;
+  final dynamic? additionalParcelsDescription;
+  final List<ListingTerm> listingTerms;
+  final List<FoundationDetail> foundationDetails;
+  final List<View> view;
+  final dynamic? operatingExpense;
+  final PropertySubType? propertySubType;
+  final String? highSchool;
+  final List<Level> levels;
+  final List<dynamic> operatingExpenseIncludes;
+  final bool? idxParticipationYn;
+  final List<String> interiorFeatures;
+  final int? bathroomsFull;
+  final bool? waterfrontYn;
+  final List<LockBoxType> lockBoxType;
+  final double? lotSizeAcres;
+  final String? subdivisionName;
+  final DateTime offMarketDate;
+  final List<Fencing> fencing;
+  final bool? internetAddressDisplayYn;
+  final dynamic? contingency;
+  final DateTime closeDate;
+  final String? streetSuffix;
+  final List<dynamic> horseAmenities;
+  final dynamic? listingService;
+  final List<WaterSource> waterSource;
+  final dynamic? topography;
+  final String? lotSizeDimensions;
+  final dynamic? storiesTotal;
+  final DateTime modificationTimestamp;
+  final int? yearBuilt;
+  final bool? propertyAttachedYn;
+  final String? buyerAgentKey;
+  final dynamic? taxLot;
+  final OriginatingSystem? originatingSystemId;
+  final bool? horseYn;
+  final List<String> petsAllowed;
+  final String? unitNumber;
+  final dynamic? netOperatingIncome;
+  final OccupantType? occupantType;
+  final List<String> otherStructures;
+  final dynamic? virtualTourUrlZillow;
+  final String? coListAgentFullName;
+  final String? coListAgentKey;
+  final dynamic? belowGradeFinishedAreaUnits;
+  final dynamic? entryLocation;
+  final List<Feature> spaFeatures;
+  final int? livingArea;
+  final dynamic? taxAssessedValue;
+  final int? coListAgentKeyNumeric;
+  final List<dynamic> existingLeaseType;
+  final List<ParkingFeature> parkingFeatures;
+  final dynamic? postalCodePlus4;
+  final int? bathroomsHalf;
+  final List<Feature> poolFeatures;
+  final double? lotSizeArea;
+  final List<Sewer> sewer;
+  final List<Heating> heating;
+  final dynamic? totalActualRent;
+  final String? streetName;
+  final List<dynamic> ownerPays;
+  final dynamic? anchorsCoTenants;
+  final List<PatioAndPorchFeature> patioAndPorchFeatures;
+  final int? mainLevelBedrooms;
+  final ListingAgreement? listingAgreement;
+  final List<Utility> utilities;
+  final List<FireplaceFeature> fireplaceFeatures;
+  final String? listingId;
+  final dynamic? documentsChangeTimestamp;
+  final List<WindowFeature> windowFeatures;
+  final List<SpecialListingCondition> specialListingConditions;
+  final bool? newConstructionYn;
+  final List<String> communityFeatures;
+  final int? bathroomsTotalInteger;
+  final dynamic? numberOfBuildings;
+  final int? garageSpaces;
+  final List<String> greenEnergyEfficient;
+  final List<Media> media;
+  final City? city;
+  final bool? internetEntireListingDisplayYn;
+  final bool? internetAutomatedValuationDisplayYn;
+  final List<AccessibilityFeature> accessibilityFeatures;
+  final SchoolDistrict? highSchoolDistrict;
+  final List<dynamic> buildingFeatures;
+  final OwnershipType? ownershipType;
+  final String? directionFaces;
+  final List<String> lotFeatures;
+  final String? postalCode;
+  final Furnished? furnished;
+  final List<String> documentsAvailable;
+  final List<ConstructionMaterial> constructionMaterials;
+  final dynamic? numberOfUnitsTotal;
+  final String? buyerOfficeName;
+  final int? associationFee;
+  final double? lotSizeSquareFeet;
+  final String? coBuyerAgentFullName;
+  final List<dynamic> tenantPays;
+  final SchoolDistrict? middleOrJuniorSchoolDistrict;
+  final String? buyerOfficeKey;
+  final String? unparsedAddress;
+  final bool? internetConsumerCommentYn;
+  final int? buildingAreaTotal;
+  final List<dynamic> otherEquipment;
 
   factory ListingModel.fromJson(Map<String, dynamic> json) => ListingModel(
         odataContext: json["@odata.context"],
@@ -681,7 +683,7 @@ class ListingModel extends ListingEntity {
         "@odata.id": odataId,
         "StreetDirPrefix": streetDirPrefix == null
             ? null
-            : streetDirFixValues.reverse[streetDirPrefix],
+            : streetDirFixValues.reverse![streetDirPrefix],
         "BedroomsTotal": bedroomsTotal,
         "LivingAreaUnits": livingAreaUnits,
         "GreenSustainability":
@@ -690,23 +692,23 @@ class ListingModel extends ListingEntity {
         "TaxLegalDescription": taxLegalDescription,
         "ContingentDate": contingentDate == null
             ? null
-            : "${contingentDate.year.toString().padLeft(4, '0')}-${contingentDate.month.toString().padLeft(2, '0')}-${contingentDate.day.toString().padLeft(2, '0')}",
+            : "${contingentDate!.year.toString().padLeft(4, '0')}-${contingentDate!.month.toString().padLeft(2, '0')}-${contingentDate!.day.toString().padLeft(2, '0')}",
         "Flooring":
-            List<dynamic>.from(flooring.map((x) => flooringValues.reverse[x])),
+            List<dynamic>.from(flooring.map((x) => flooringValues.reverse![x])),
         "PhotosCount": photosCount,
         "FireplacesTotal": fireplacesTotal,
         "AdditionalParcelsYN": additionalParcelsYn,
         "WaterfrontFeatures": List<dynamic>.from(
-            waterfrontFeatures.map((x) => waterfrontFeatureValues.reverse[x])),
+            waterfrontFeatures.map((x) => waterfrontFeatureValues.reverse![x])),
         "ViewYN": viewYn,
         "Cooling":
-            List<dynamic>.from(cooling.map((x) => coolingValues.reverse[x])),
+            List<dynamic>.from(cooling.map((x) => coolingValues.reverse![x])),
         "GarageYN": garageYn,
         "ExteriorFeatures": List<dynamic>.from(exteriorFeatures.map((x) => x)),
         "StatusChangeTimestamp": statusChangeTimestamp.toIso8601String(),
         "AvailabilityDate": availabilityDate,
         "SecurityFeatures": List<dynamic>.from(
-            securityFeatures.map((x) => securityFeatureValues.reverse[x])),
+            securityFeatures.map((x) => securityFeatureValues.reverse![x])),
         "BuyerAgentFullName": buyerAgentFullName,
         "DocumentsCount": documentsCount,
         "PublicRemarks": publicRemarks == null ? null : publicRemarks,
@@ -715,27 +717,27 @@ class ListingModel extends ListingEntity {
         "CoBuyerAgentKey": coBuyerAgentKey == null ? null : coBuyerAgentKey,
         "AssociationFeeFrequency": associationFeeFrequency == null
             ? null
-            : associationFeeFrequencyValues.reverse[associationFeeFrequency],
+            : associationFeeFrequencyValues.reverse![associationFeeFrequency],
         "ElementarySchoolDistrict":
-            schoolDistrictValues.reverse[elementarySchoolDistrict],
+            schoolDistrictValues.reverse![elementarySchoolDistrict],
         "WaterBodyName": waterBodyName == null ? null : waterBodyName,
         "CoListOfficeName": coListOfficeName == null ? null : coListOfficeName,
         "RoadSurfaceType": List<dynamic>.from(roadSurfaceType.map((x) => x)),
         "AboveGradeFinishedArea": aboveGradeFinishedArea,
         "PriceChangeTimestamp": priceChangeTimestamp == null
             ? null
-            : priceChangeTimestamp.toIso8601String(),
+            : priceChangeTimestamp!.toIso8601String(),
         "ListingKeyNumeric": listingKeyNumeric,
         "MajorChangeType": majorChangeType == null
             ? null
-            : mlsStatusValues.reverse[majorChangeType],
+            : mlsStatusValues.reverse![majorChangeType],
         "LeasableArea": leasableArea,
         "ListingContractDate":
             "${listingContractDate.year.toString().padLeft(4, '0')}-${listingContractDate.month.toString().padLeft(2, '0')}-${listingContractDate.day.toString().padLeft(2, '0')}",
         "CoListOfficeKey": coListOfficeKey == null ? null : coListOfficeKey,
         "Zoning": zoning,
         "Appliances": List<dynamic>.from(
-            appliances.map((x) => applianceValues.reverse[x])),
+            appliances.map((x) => applianceValues.reverse![x])),
         "MLSAreaMajor": mlsAreaMajor,
         "ListOfficeName": listOfficeName,
         "CoBuyerOfficeName":
@@ -744,39 +746,39 @@ class ListingModel extends ListingEntity {
         "TaxBlock": taxBlock,
         "CurrentUse": List<dynamic>.from(currentUse.map((x) => x)),
         "OriginatingSystemKey":
-            originatingSystemValues.reverse[originatingSystemKey],
-        "CountyOrParish": countyOrParishValues.reverse[countyOrParish],
+            originatingSystemValues.reverse![originatingSystemKey],
+        "CountyOrParish": countyOrParishValues.reverse![countyOrParish],
         "DualVariableCompensationYN": dualVariableCompensationYn == null
             ? null
             : dualVariableCompensationYn,
-        "PropertyType": propertyTypeValues.reverse[propertyType],
+        "PropertyType": propertyTypeValues.reverse![propertyType],
         "PhotosChangeTimestamp": photosChangeTimestamp.toIso8601String(),
         "ListPrice": listPrice,
         "OriginatingSystemName":
-            originatingSystemNameValues.reverse[originatingSystemName],
+            originatingSystemNameValues.reverse![originatingSystemName],
         "AssociationYN": associationYn,
-        "MlsStatus": mlsStatusValues.reverse[mlsStatus],
+        "MlsStatus": mlsStatusValues.reverse![mlsStatus],
         "StreetNumber": streetNumber,
         "GrossScheduledIncome": grossScheduledIncome,
         "BelowGradeFinishedAreaSource": belowGradeFinishedAreaSource,
         "CoBuyerOfficeKey": coBuyerOfficeKey == null ? null : coBuyerOfficeKey,
         "LeaseTerm": leaseTerm,
         "ListingKey": listingKey,
-        "StateOrProvince": stateOrProvinceValues.reverse[stateOrProvince],
+        "StateOrProvince": stateOrProvinceValues.reverse![stateOrProvince],
         "AboveGradeFinishedAreaUnits": aboveGradeFinishedAreaUnits,
         "CoveredSpaces": coveredSpaces,
         "ListAgentKeyNumeric": listAgentKeyNumeric,
         "MiddleOrJuniorSchool": middleOrJuniorSchool,
         "AssociationFeeIncludes": List<dynamic>.from(associationFeeIncludes
-            .map((x) => associationFeeIncludeValues.reverse[x])),
+            .map((x) => associationFeeIncludeValues.reverse![x])),
         "SyndicateTo": List<dynamic>.from(
-            syndicateTo.map((x) => syndicateToValues.reverse[x])),
+            syndicateTo.map((x) => syndicateToValues.reverse![x])),
         "VirtualTourURLUnbranded":
             virtualTourUrlUnbranded == null ? null : virtualTourUrlUnbranded,
         "ElementarySchool": elementarySchool == null ? null : elementarySchool,
         "StreetDirSuffix": streetDirSuffix == null
             ? null
-            : streetDirFixValues.reverse[streetDirSuffix],
+            : streetDirFixValues.reverse![streetDirSuffix],
         "ListOfficeKeyNumeric": listOfficeKeyNumeric,
         "Disclosures": List<dynamic>.from(disclosures.map((x) => x)),
         "ListOfficeKey": listOfficeKey,
@@ -785,11 +787,11 @@ class ListingModel extends ListingEntity {
             bridgeModificationTimestamp.toIso8601String(),
         "ListAgentFullName": listAgentFullName,
         "AttachedGarageYN": attachedGarageYn,
-        "StandardStatus": mlsStatusValues.reverse[standardStatus],
+        "StandardStatus": mlsStatusValues.reverse![standardStatus],
         "CultivatedArea": cultivatedArea,
-        "Roof": List<dynamic>.from(roof.map((x) => roofValues.reverse[x])),
+        "Roof": List<dynamic>.from(roof.map((x) => roofValues.reverse![x])),
         "PropertyCondition": List<dynamic>.from(
-            propertyCondition.map((x) => propertyConditionValues.reverse[x])),
+            propertyCondition.map((x) => propertyConditionValues.reverse![x])),
         "ParkingTotal": parkingTotal == null ? null : parkingTotal,
         "CoListOfficeKeyNumeric":
             coListOfficeKeyNumeric == null ? null : coListOfficeKeyNumeric,
@@ -797,14 +799,15 @@ class ListingModel extends ListingEntity {
         "PoolPrivateYN": poolPrivateYn,
         "AdditionalParcelsDescription": additionalParcelsDescription,
         "ListingTerms": List<dynamic>.from(
-            listingTerms.map((x) => listingTermValues.reverse[x])),
+            listingTerms.map((x) => listingTermValues.reverse![x])),
         "FoundationDetails": List<dynamic>.from(
-            foundationDetails.map((x) => foundationDetailValues.reverse[x])),
-        "View": List<dynamic>.from(view.map((x) => viewValues.reverse[x])),
+            foundationDetails.map((x) => foundationDetailValues.reverse![x])),
+        "View": List<dynamic>.from(view.map((x) => viewValues.reverse![x])),
         "OperatingExpense": operatingExpense,
-        "PropertySubType": propertySubTypeValues.reverse[propertySubType],
+        "PropertySubType": propertySubTypeValues.reverse![propertySubType],
         "HighSchool": highSchool,
-        "Levels": List<dynamic>.from(levels.map((x) => levelValues.reverse[x])),
+        "Levels":
+            List<dynamic>.from(levels.map((x) => levelValues.reverse![x])),
         "OperatingExpenseIncludes":
             List<dynamic>.from(operatingExpenseIncludes.map((x) => x)),
         "IDXParticipationYN": idxParticipationYn,
@@ -812,13 +815,13 @@ class ListingModel extends ListingEntity {
         "BathroomsFull": bathroomsFull,
         "WaterfrontYN": waterfrontYn,
         "LockBoxType": List<dynamic>.from(
-            lockBoxType.map((x) => lockBoxTypeValues.reverse[x])),
+            lockBoxType.map((x) => lockBoxTypeValues.reverse![x])),
         "LotSizeAcres": lotSizeAcres,
         "SubdivisionName": subdivisionName,
         "OffMarketDate":
             "${offMarketDate.year.toString().padLeft(4, '0')}-${offMarketDate.month.toString().padLeft(2, '0')}-${offMarketDate.day.toString().padLeft(2, '0')}",
         "Fencing":
-            List<dynamic>.from(fencing.map((x) => fencingValues.reverse[x])),
+            List<dynamic>.from(fencing.map((x) => fencingValues.reverse![x])),
         "InternetAddressDisplayYN": internetAddressDisplayYn,
         "Contingency": contingency,
         "CloseDate":
@@ -827,7 +830,7 @@ class ListingModel extends ListingEntity {
         "HorseAmenities": List<dynamic>.from(horseAmenities.map((x) => x)),
         "ListingService": listingService,
         "WaterSource": List<dynamic>.from(
-            waterSource.map((x) => waterSourceValues.reverse[x])),
+            waterSource.map((x) => waterSourceValues.reverse![x])),
         "Topography": topography,
         "LotSizeDimensions":
             lotSizeDimensions == null ? null : lotSizeDimensions,
@@ -839,12 +842,12 @@ class ListingModel extends ListingEntity {
         "BuyerAgentKey": buyerAgentKey,
         "TaxLot": taxLot,
         "OriginatingSystemID":
-            originatingSystemValues.reverse[originatingSystemId],
+            originatingSystemValues.reverse![originatingSystemId],
         "HorseYN": horseYn,
         "PetsAllowed": List<dynamic>.from(petsAllowed.map((x) => x)),
         "UnitNumber": unitNumber == null ? null : unitNumber,
         "NetOperatingIncome": netOperatingIncome,
-        "OccupantType": occupantTypeValues.reverse[occupantType],
+        "OccupantType": occupantTypeValues.reverse![occupantType],
         "OtherStructures": List<dynamic>.from(otherStructures.map((x) => x)),
         "VirtualTourURLZillow": virtualTourUrlZillow,
         "CoListAgentFullName":
@@ -853,7 +856,7 @@ class ListingModel extends ListingEntity {
         "BelowGradeFinishedAreaUnits": belowGradeFinishedAreaUnits,
         "EntryLocation": entryLocation,
         "SpaFeatures": List<dynamic>.from(
-            spaFeatures.map((x) => featureValues.reverse[x])),
+            spaFeatures.map((x) => featureValues.reverse![x])),
         "LivingArea": livingArea,
         "TaxAssessedValue": taxAssessedValue,
         "CoListAgentKeyNumeric":
@@ -861,33 +864,33 @@ class ListingModel extends ListingEntity {
         "ExistingLeaseType":
             List<dynamic>.from(existingLeaseType.map((x) => x)),
         "ParkingFeatures": List<dynamic>.from(
-            parkingFeatures.map((x) => parkingFeatureValues.reverse[x])),
+            parkingFeatures.map((x) => parkingFeatureValues.reverse![x])),
         "PostalCodePlus4": postalCodePlus4,
         "BathroomsHalf": bathroomsHalf,
         "PoolFeatures": List<dynamic>.from(
-            poolFeatures.map((x) => featureValues.reverse[x])),
+            poolFeatures.map((x) => featureValues.reverse![x])),
         "LotSizeArea": lotSizeArea,
-        "Sewer": List<dynamic>.from(sewer.map((x) => sewerValues.reverse[x])),
+        "Sewer": List<dynamic>.from(sewer.map((x) => sewerValues.reverse![x])),
         "Heating":
-            List<dynamic>.from(heating.map((x) => heatingValues.reverse[x])),
+            List<dynamic>.from(heating.map((x) => heatingValues.reverse![x])),
         "TotalActualRent": totalActualRent,
         "StreetName": streetName,
         "OwnerPays": List<dynamic>.from(ownerPays.map((x) => x)),
         "AnchorsCoTenants": anchorsCoTenants,
         "PatioAndPorchFeatures": List<dynamic>.from(patioAndPorchFeatures
-            .map((x) => patioAndPorchFeatureValues.reverse[x])),
+            .map((x) => patioAndPorchFeatureValues.reverse![x])),
         "MainLevelBedrooms": mainLevelBedrooms,
-        "ListingAgreement": listingAgreementValues.reverse[listingAgreement],
+        "ListingAgreement": listingAgreementValues.reverse![listingAgreement],
         "Utilities":
-            List<dynamic>.from(utilities.map((x) => utilityValues.reverse[x])),
+            List<dynamic>.from(utilities.map((x) => utilityValues.reverse![x])),
         "FireplaceFeatures": List<dynamic>.from(
-            fireplaceFeatures.map((x) => fireplaceFeatureValues.reverse[x])),
+            fireplaceFeatures.map((x) => fireplaceFeatureValues.reverse![x])),
         "ListingId": listingId,
         "DocumentsChangeTimestamp": documentsChangeTimestamp,
         "WindowFeatures": List<dynamic>.from(
-            windowFeatures.map((x) => windowFeatureValues.reverse[x])),
+            windowFeatures.map((x) => windowFeatureValues.reverse![x])),
         "SpecialListingConditions": List<dynamic>.from(specialListingConditions
-            .map((x) => specialListingConditionValues.reverse[x])),
+            .map((x) => specialListingConditionValues.reverse![x])),
         "NewConstructionYN":
             newConstructionYn == null ? null : newConstructionYn,
         "CommunityFeatures":
@@ -898,23 +901,23 @@ class ListingModel extends ListingEntity {
         "GreenEnergyEfficient":
             List<dynamic>.from(greenEnergyEfficient.map((x) => x)),
         "Media": List<dynamic>.from(media.map((x) => x.toJson())),
-        "City": cityValues.reverse[city],
+        "City": cityValues.reverse![city],
         "InternetEntireListingDisplayYN": internetEntireListingDisplayYn,
         "InternetAutomatedValuationDisplayYN":
             internetAutomatedValuationDisplayYn,
         "AccessibilityFeatures": List<dynamic>.from(accessibilityFeatures
-            .map((x) => accessibilityFeatureValues.reverse[x])),
-        "HighSchoolDistrict": schoolDistrictValues.reverse[highSchoolDistrict],
+            .map((x) => accessibilityFeatureValues.reverse![x])),
+        "HighSchoolDistrict": schoolDistrictValues.reverse![highSchoolDistrict],
         "BuildingFeatures": List<dynamic>.from(buildingFeatures.map((x) => x)),
-        "OwnershipType": ownershipTypeValues.reverse[ownershipType],
+        "OwnershipType": ownershipTypeValues.reverse![ownershipType],
         "DirectionFaces": directionFaces == null ? null : directionFaces,
         "LotFeatures": List<dynamic>.from(lotFeatures.map((x) => x)),
         "PostalCode": postalCode,
-        "Furnished": furnishedValues.reverse[furnished],
+        "Furnished": furnishedValues.reverse![furnished],
         "DocumentsAvailable":
             List<dynamic>.from(documentsAvailable.map((x) => x)),
         "ConstructionMaterials": List<dynamic>.from(constructionMaterials
-            .map((x) => constructionMaterialValues.reverse[x])),
+            .map((x) => constructionMaterialValues.reverse![x])),
         "NumberOfUnitsTotal": numberOfUnitsTotal,
         "BuyerOfficeName": buyerOfficeName,
         "AssociationFee": associationFee == null ? null : associationFee,
@@ -923,7 +926,7 @@ class ListingModel extends ListingEntity {
             coBuyerAgentFullName == null ? null : coBuyerAgentFullName,
         "TenantPays": List<dynamic>.from(tenantPays.map((x) => x)),
         "MiddleOrJuniorSchoolDistrict":
-            schoolDistrictValues.reverse[middleOrJuniorSchoolDistrict],
+            schoolDistrictValues.reverse![middleOrJuniorSchoolDistrict],
         "BuyerOfficeKey": buyerOfficeKey,
         "UnparsedAddress": unparsedAddress,
         "InternetConsumerCommentYN": internetConsumerCommentYn,
@@ -1362,28 +1365,28 @@ final mlsStatusValues = EnumValues({"Closed": MlsStatus.CLOSED});
 
 class Media {
   Media({
-    this.order,
-    this.mediaKey,
-    this.mediaUrl,
-    this.resourceRecordKey,
-    this.resourceName,
-    this.className,
-    this.mediaCategory,
-    this.mimeType,
-    this.mediaObjectId,
-    this.shortDescription,
+    required this.order,
+    required this.mediaKey,
+    required this.mediaUrl,
+    required this.resourceRecordKey,
+    required this.resourceName,
+    required this.className,
+    required this.mediaCategory,
+    required this.mimeType,
+    required this.mediaObjectId,
+    required this.shortDescription,
   });
 
-  String order;
-  String mediaKey;
-  String mediaUrl;
-  String resourceRecordKey;
-  ResourceName resourceName;
-  PropertyType className;
-  MediaCategory mediaCategory;
-  MimeType mimeType;
-  String mediaObjectId;
-  String shortDescription;
+  String? order;
+  String? mediaKey;
+  String? mediaUrl;
+  String? resourceRecordKey;
+  ResourceName? resourceName;
+  PropertyType? className;
+  MediaCategory? mediaCategory;
+  MimeType? mimeType;
+  String? mediaObjectId;
+  String? shortDescription;
 
   factory Media.fromJson(Map<String, dynamic> json) => Media(
         order: json["Order"],
@@ -1404,10 +1407,10 @@ class Media {
         "MediaKey": mediaKey,
         "MediaURL": mediaUrl,
         "ResourceRecordKey": resourceRecordKey,
-        "ResourceName": resourceNameValues.reverse[resourceName],
-        "ClassName": propertyTypeValues.reverse[className],
-        "MediaCategory": mediaCategoryValues.reverse[mediaCategory],
-        "MimeType": mimeTypeValues.reverse[mimeType],
+        "ResourceName": resourceNameValues.reverse![resourceName],
+        "ClassName": propertyTypeValues.reverse![className],
+        "MediaCategory": mediaCategoryValues.reverse![mediaCategory],
+        "MimeType": mimeTypeValues.reverse![mimeType],
         "MediaObjectID": mediaObjectId,
         "ShortDescription": shortDescription == null ? null : shortDescription,
       };
@@ -1796,11 +1799,11 @@ final windowFeatureValues = EnumValues({
 
 class EnumValues<T> {
   Map<String, T> map;
-  Map<T, String> reverseMap;
+  Map<T, String>? reverseMap;
 
-  EnumValues(this.map);
+  EnumValues(this.map, [this.reverseMap]);
 
-  Map<T, String> get reverse {
+  Map<T, String>? get reverse {
     if (reverseMap == null) {
       reverseMap = map.map((k, v) => new MapEntry(v, k));
     }

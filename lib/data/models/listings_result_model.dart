@@ -14,16 +14,16 @@ String listingsResultModelToJson(ListingsResultModel data) =>
 
 class ListingsResultModel {
   ListingsResultModel({
-    this.odataContext,
-    this.odataNextLink,
-    this.odataCount,
-    this.listings,
+    required this.odataContext,
+    required this.odataNextLink,
+    required this.odataCount,
+    required this.listings,
   });
 
-  String odataContext;
-  String odataNextLink;
-  int odataCount;
-  List<ListingModel> listings;
+  final String odataContext;
+  final String odataNextLink;
+  final int odataCount;
+  final List<ListingModel> listings;
 
   factory ListingsResultModel.fromJson(Map<String, dynamic> json) =>
       ListingsResultModel(
