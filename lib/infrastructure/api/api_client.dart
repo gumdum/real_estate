@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart';
-import 'package:real_estate/data/core/api_constants.dart';
+import 'package:real_estate/infrastructure/api/api_constants.dart';
 
 class ApiClient {
   final Client _client;

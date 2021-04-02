@@ -1,6 +1,6 @@
-import 'package:real_estate/data/core/api_client.dart';
-import 'package:real_estate/data/models/listing_model.dart';
-import 'package:real_estate/data/models/listings_result_model.dart';
+import 'package:real_estate/infrastructure/api/api_client.dart';
+import 'package:real_estate/infrastructure/models/listing_model.dart';
+import 'package:real_estate/infrastructure/models/listings_result_model.dart';
 
 abstract class ListingRemoteDataSource {
   Future<List<ListingModel>> getFeatured();

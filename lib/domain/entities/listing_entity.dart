@@ -1,16 +1,17 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:real_estate/infrastructure/models/listing_model.dart';
 
 @immutable
 class ListingEntity extends Equatable {
-  final String listingKey; //id of each property listing
-  final int listPrice; //400000
+  final String listEntId; //id of each property listing
+  final List<Media> listEntMedia;
 
   ListingEntity({
-    required this.listingKey,
-    required this.listPrice,
+    required this.listEntId,
+    required this.listEntMedia,
   });
 
   @override
-  List<Object> get props => [listingKey, listPrice];
+  List<Object> get props => [listEntId, listEntMedia];
 }

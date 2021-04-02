@@ -1,9 +1,9 @@
 import 'package:dfunc/dfunc.dart';
-import 'package:real_estate/data/data_sources/listing_remote_data_source.dart';
-import 'package:real_estate/data/models/listing_model.dart';
 import 'package:real_estate/domain/entities/app_error.dart';
 import 'package:real_estate/domain/entities/listing_entity.dart';
 import 'package:real_estate/domain/repositories/listing_repository.dart';
+import 'package:real_estate/infrastructure/data_sources/listing_remote_data_source.dart';
+import 'package:real_estate/infrastructure/models/listing_model.dart';
 
 class ListingRepositoryImpl extends ListingRepository {
   final ListingRemoteDataSource remoteDataSource;

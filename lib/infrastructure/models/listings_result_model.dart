@@ -1,10 +1,6 @@
-// To parse this JSON data, do
-//
-//     final listingsResultModel = listingsResultModelFromJson(jsonString);
-
 import 'dart:convert';
 
-import 'package:real_estate/data/models/listing_model.dart';
+import 'package:real_estate/infrastructure/models/listing_model.dart';
 
 ListingsResultModel listingsResultModelFromJson(String str) =>
     ListingsResultModel.fromJson(json.decode(str));
