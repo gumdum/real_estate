@@ -12,8 +12,13 @@ class ListingCardWidget extends StatelessWidget {
     required this.listEntMedia,
   });
 
+  //TODO: Add main image for listing
   @override
   Widget build(BuildContext context) {
+    Map<String, String> headers = Map();
+    headers['Access-Control-Allow-Origin'] = '*';
+    headers['Access-Control-Allow-Credentials'] = 'true';
+
     return Material(
       child: GestureDetector(
         onTap: () {},
@@ -23,10 +28,8 @@ class ListingCardWidget extends StatelessWidget {
           ),
           child: ExtendedImage.network(
               'https://realtor.calvinellis.dev/app-images/for_sale_sold.jpg',
-              //TODO Use the listEntMap to display the carousel images
+              headers: headers,
               fit: BoxFit.cover),
-          // border: Border.all(color: Colors.red, width: 1.0),
-          // borderRadius: BorderRadius.all(Radius.circular(30.0))),
         ),
       ),
     );

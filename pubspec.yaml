@@ -33,6 +33,7 @@ dependencies:
   google_fonts: ^2.0.0
   http: ^0.13.1
   pedantic: ^1.11.0
+  strings: ^0.2.1
 
 dev_dependencies:
   flutter_test:

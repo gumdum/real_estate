@@ -384,9 +384,15 @@ class ListingModel extends ListingEntity {
     required this.buildingAreaTotal,
     required this.otherEquipment,
   }) : super(
-          listEntId: listingKey,
-          listEntMedia: media,
-        );
+            listEntId: listingKey,
+            listEntMedia: media,
+            listEntBathrooms: bathroomsTotalInteger,
+            listEntBedrooms: bedroomsTotal,
+            listEntMarketDate: listingContractDate,
+            listEntPrice: listPrice,
+            listEntPropType: propertySubType,
+            listEntSquareFt: lotSizeSquareFeet,
+            listEntUnparsedAddress: unparsedAddress);
 
   factory ListingModel.fromJson(Map<String, dynamic> json) => ListingModel(
         odataContext: json['@odata.context'],

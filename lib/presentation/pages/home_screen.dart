@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:real_estate/application/blocs/listing_backdrop/listing_backdrop_bloc.dart';
 import 'package:real_estate/application/blocs/listing_carousel/listing_carousel_bloc.dart';
+import 'package:real_estate/application/blocs/listing_tabbed/listing_tabbed_bloc.dart';
 import 'package:real_estate/injections/get_it.dart';
 import 'package:real_estate/presentation/pages/home/listing_carousel/listing_carousel_widget.dart';
 
@@ -13,6 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   late ListingCarouselBloc listingCarouselBloc;
   late ListingBackdropBloc listingBackdropBloc;
+  late ListingTabbedBloc listingTabbedBloc;
 
   @override
   void initState() {
@@ -23,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //so the backdrop will load when the first image loads
     listingBackdropBloc = listingCarouselBloc.listingBackdropBloc;
 
+    listingTabbedBloc = getItInstance<ListingTabbedBloc>();
     listingCarouselBloc.add(const CarouselLoadEvent());
   }
 
@@ -31,6 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
     listingCarouselBloc.close();
     listingBackdropBloc.close();
+    listingTabbedBloc.close();
   }
 
   @override
@@ -42,6 +46,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         BlocProvider(
           create: (context) => listingBackdropBloc,
+        ),
+        BlocProvider(
+          create: (context) => listingTabbedBloc,
         ),
       ],
       child: Scaffold(

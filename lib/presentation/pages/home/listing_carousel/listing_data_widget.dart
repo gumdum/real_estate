@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:real_estate/application/blocs/listing_backdrop/listing_backdrop_bloc.dart';
+import 'package:strings/strings.dart';
 
+//TODO Turn this data into a card of info
 class ListingDataWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,7 +11,7 @@ class ListingDataWidget extends StatelessWidget {
         builder: (context, state) {
       if (state is ListingBackdropChanged) {
         return Text(
-          state.listing.listEntId, //TODO Turn this data into a card of info
+          camelize(state.listing.listEntUnparsedAddress!),
           textAlign: TextAlign.center,
           maxLines: 1,
           overflow: TextOverflow.fade,

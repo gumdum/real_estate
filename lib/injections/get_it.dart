@@ -2,6 +2,7 @@ import 'package:get_it/get_it.dart';
 import 'package:http/http.dart';
 import 'package:real_estate/application/blocs/listing_backdrop/listing_backdrop_bloc.dart';
 import 'package:real_estate/application/blocs/listing_carousel/listing_carousel_bloc.dart';
+import 'package:real_estate/application/blocs/listing_tabbed/listing_tabbed_bloc.dart';
 import 'package:real_estate/infrastructure/api/api_client.dart';
 import 'package:real_estate/infrastructure/data_sources/listing_remote_data_source.dart';
 import 'package:real_estate/infrastructure/repositories/listing_repository_impl.dart';
@@ -39,4 +40,12 @@ Future init() async {
         getFeatured: getItInstance(),
         listingBackdropBloc: getItInstance(),
       ));
+
+  getItInstance.registerFactory(
+    () => ListingTabbedBloc(
+      getFeatured: GetFeatured(getItInstance()),
+      getForSale: GetForSale(getItInstance()),
+      getRental: GetRental(getItInstance()),
+    ),
+  );
 }
