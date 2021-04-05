@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:real_estate/application/blocs/listing_backdrop/listing_backdrop_bloc.dart';
@@ -27,8 +28,10 @@ class ListingBackdropWidget extends StatelessWidget {
               child: BlocBuilder<ListingBackdropBloc, ListingBackdropState>(
                   builder: (context, state) {
                 if (state is ListingBackdropChanged) {
-                  return Image.network('/app-images/for_sale_sold.jpg',
-                      fit: BoxFit.cover);
+                  return CachedNetworkImage(
+                      imageUrl:
+                          'https://www.calvinellis.dev/app-images/for_sale_sold.jpg',
+                      fit: BoxFit.fitHeight);
                 }
                 return const SizedBox.shrink();
               }),

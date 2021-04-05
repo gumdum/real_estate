@@ -53,7 +53,7 @@ class _ListingPageViewState extends State<ListingPageView> {
             index: index,
             pageController: _pageController,
             listEntId: listing.listEntId,
-            listEntMedia: listing.listEntMedia,
+            listEntPrice: listing.listEntPrice,
           );
         },
         pageSnapping: true,

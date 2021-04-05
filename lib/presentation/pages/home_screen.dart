@@ -5,6 +5,7 @@ import 'package:real_estate/application/blocs/listing_carousel/listing_carousel_
 import 'package:real_estate/application/blocs/listing_tabbed/listing_tabbed_bloc.dart';
 import 'package:real_estate/injections/get_it.dart';
 import 'package:real_estate/presentation/pages/home/listing_carousel/listing_carousel_widget.dart';
+import 'package:real_estate/presentation/pages/home/listing_tabbed/listing_tabbed_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -66,12 +67,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       defaultIndex: state.defaultIndex,
                     ),
                   ),
-                  const FractionallySizedBox(
+                  FractionallySizedBox(
                     alignment: Alignment.bottomCenter,
                     heightFactor: 0.4,
-                    child: Placeholder(
-                      color: Colors.white,
-                    ),
+                    child: ListingTabbedWidget(),
                   ),
                 ],
               );

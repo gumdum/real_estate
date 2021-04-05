@@ -8,13 +8,13 @@ import 'package:real_estate/presentation/pages/home/listing_carousel/listing_car
 class AnimatedListingCardWidget extends StatelessWidget {
   final int index;
   final String listEntId;
-  final List listEntMedia;
+  final int listEntPrice;
   final PageController pageController;
 
   const AnimatedListingCardWidget(
       {required this.index,
       required this.listEntId,
-      required this.listEntMedia,
+      required this.listEntPrice,
       required this.pageController});
 
 //Animation uses the pageController. When pagecontroller changes the window
@@ -54,7 +54,7 @@ class AnimatedListingCardWidget extends StatelessWidget {
       },
       child: ListingCardWidget(
         listEntId: listEntId,
-        listEntMedia: listEntMedia,
+        listEntPrice: listEntPrice,
       ),
     );
   }
