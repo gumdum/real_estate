@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:real_estate/domain/entities/listing_entity.dart';
 import 'package:real_estate/presentation/pages/home/listing_carousel/listing_backdrop_widget.dart';
@@ -30,7 +29,7 @@ class ListingCarouselWidget extends StatelessWidget {
               listings: listings,
               initialPage: defaultIndex,
             ),
-            ListingDataWidget(), //TODO Adjust data to show more info
+            ListingDataWidget(),
             Seperator(),
           ],
         ),

@@ -30,8 +30,7 @@ class ListTabCardWidget extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(Sizes.dimen_16.w.toDouble()),
               child: CachedNetworkImage(
-                imageUrl:
-                    'https://realtor.calvinellis.dev/app-images/for_sale_sold.jpg',
+                imageUrl: media[0].mediaUrl.toString(),
               ),
             ),
           ),

@@ -49,11 +49,14 @@ class _ListingPageViewState extends State<ListingPageView> {
         controller: _pageController,
         itemBuilder: (context, index) {
           final ListingEntity listing = widget.listings[index];
+          final listImageUrl = listing.listEntMedia[0].mediaUrl;
+
           return AnimatedListingCardWidget(
             index: index,
             pageController: _pageController,
             listEntId: listing.listEntId,
             listEntPrice: listing.listEntPrice,
+            listImageUrl: listImageUrl.toString(),
           );
         },
         pageSnapping: true,

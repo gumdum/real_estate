@@ -13,6 +13,7 @@ class ListingApp extends StatelessWidget {
       title: 'Real Estate Listing App',
       theme: ThemeData(
         primaryColor: AppColor.vulcan,
+        accentColor: AppColor.royalBlue,
         scaffoldBackgroundColor: AppColor.vulcan,
         textTheme: ThemeText.getTextTheme(),
         appBarTheme: const AppBarTheme(elevation: 0),

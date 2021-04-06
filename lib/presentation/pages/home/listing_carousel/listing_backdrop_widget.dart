@@ -30,13 +30,12 @@ class ListingBackdropWidget extends StatelessWidget {
                 if (state is ListingBackdropChanged) {
                   return CachedNetworkImage(
                       imageUrl:
-                          'https://www.calvinellis.dev/app-images/for_sale_sold.jpg',
+                          state.listing.listEntMedia[0].mediaUrl.toString(),
                       fit: BoxFit.fitHeight);
                 }
                 return const SizedBox.shrink();
               }),
             ),
-            //TODO Use the listEntMap to display the carousel images
             BackdropFilter(
               filter: ImageFilter.blur(
                 sigmaX: 5.0,

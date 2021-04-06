@@ -21,7 +21,9 @@ class ListingAppBar extends StatelessWidget {
               'assets/svgs/menu.svg',
               height: Sizes.dimen_12.h.toDouble(),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Scaffold.of(context).openDrawer(); //!pull out navigation drawer
+            },
           ),
           Expanded(
             child: const Logo(

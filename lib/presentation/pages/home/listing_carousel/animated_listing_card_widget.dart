@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:real_estate/common/constants/size_constants.dart';
 import 'package:real_estate/common/extensions/size_extensions.dart';
 import 'package:real_estate/common/screenutil/screenutil.dart';
+import 'package:real_estate/infrastructure/models/listing_model.dart';
 import 'package:real_estate/presentation/pages/home/listing_carousel/listing_card_widget.dart';
 
 //Wraps each ListingCardWidget with animation
@@ -9,12 +10,14 @@ class AnimatedListingCardWidget extends StatelessWidget {
   final int index;
   final String listEntId;
   final int listEntPrice;
+  final String listImageUrl;
   final PageController pageController;
 
   const AnimatedListingCardWidget(
       {required this.index,
       required this.listEntId,
       required this.listEntPrice,
+      required this.listImageUrl,
       required this.pageController});
 
 //Animation uses the pageController. When pagecontroller changes the window
@@ -54,7 +57,7 @@ class AnimatedListingCardWidget extends StatelessWidget {
       },
       child: ListingCardWidget(
         listEntId: listEntId,
-        listEntPrice: listEntPrice,
+        listImageUrl: listImageUrl,
       ),
     );
   }
