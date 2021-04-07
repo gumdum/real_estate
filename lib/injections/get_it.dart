@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart';
+import 'package:real_estate/application/blocs/language/language_bloc.dart';
 import 'package:real_estate/application/blocs/listing_backdrop/listing_backdrop_bloc.dart';
 import 'package:real_estate/application/blocs/listing_carousel/listing_carousel_bloc.dart';
 import 'package:real_estate/application/blocs/listing_tabbed/listing_tabbed_bloc.dart';
@@ -48,4 +49,6 @@ Future init() async {
       getRental: GetRental(getItInstance()),
     ),
   );
+
+  getItInstance.registerSingleton<LanguageBloc>(LanguageBloc());
 }

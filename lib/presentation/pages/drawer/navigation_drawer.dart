@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:real_estate/application/blocs/language/language_bloc.dart';
+import 'package:real_estate/common/constants/languages.dart';
 import 'package:real_estate/common/constants/size_constants.dart';
 import 'package:real_estate/common/extensions/size_extensions.dart';
+import 'package:real_estate/presentation/app_localizations.dart';
 import 'package:real_estate/presentation/pages/drawer/navigation_expanded_list_item.dart';
 import 'package:real_estate/presentation/pages/drawer/navigation_list_item.dart';
 import 'package:real_estate/presentation/widgets/logo.dart';
+import 'package:real_estate/common/constants/translation_constants.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer();
@@ -36,23 +41,31 @@ class NavigationDrawer extends StatelessWidget {
               ),
             ),
             NavigationListItem(
-              title: 'Favorite Listings',
+              //favorite listings
+              title: AppLocalizations.of(context)!
+                  .translate(TranslationConstants.favoriteListings),
               onPressed: () {},
             ),
             NavigationExpandedListItem(
-              title: 'Language',
-              onPressed: () {},
-              children: [
-                'English',
-                'Spanish',
-              ],
+              title: AppLocalizations.of(context)!
+                  .translate(TranslationConstants.language),
+              onPressed: (index) {
+                BlocProvider.of<LanguageBloc>(context).add(
+                  ToggleLanguageEvent(
+                    Languages.languages[index],
+                  ),
+                );
+              },
+              children: Languages.languages.map((e) => e.languageName).toList(),
             ),
             NavigationListItem(
-              title: 'Contact',
+              title: AppLocalizations.of(context)!
+                  .translate(TranslationConstants.contact),
               onPressed: () {},
             ),
             NavigationListItem(
-              title: 'About',
+              title: AppLocalizations.of(context)!
+                  .translate(TranslationConstants.about),
               onPressed: () {},
             ),
           ],
